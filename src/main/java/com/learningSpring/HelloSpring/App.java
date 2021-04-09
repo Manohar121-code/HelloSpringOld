@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import com.learningSpring.bean.Address;
 import com.learningSpring.bean.Student;
 
 /**
@@ -23,5 +24,8 @@ public class App {
 		Student student = (Student) appContext.getBean("studentbean");
 		String name = student.getName();
 		System.out.println("Loaded name - "+ name);
+		
+		Address address = student.getAddress();
+		System.out.println(address);
 	}
 }
